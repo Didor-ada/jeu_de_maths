@@ -23,26 +23,24 @@ namespace jeu_de_maths
                 e_Operateur o = (e_Operateur)rand.Next(1, 4); // o => 1 ou 2, 1 = addition / 2 = multiplication
                 int resultatAttendu;
 
-                if (o == e_Operateur.ADDITION) // Addition
+                switch (o)
                 {
-                    Console.Write(a + " + " + b + " = ");
-                    resultatAttendu = a + b;
-                }
-                else if (o == e_Operateur.MULTIPLICATION) // Multiplication
-                {
-                    Console.Write(a + " x " + b + " = ");
-                    resultatAttendu = a * b;
-                }
-                else if (o == e_Operateur.SOUSTRACTION) // Multiplication
-                {
-                    Console.Write(a + " - " + b + " = ");
-                    resultatAttendu = a - b;
-                }
-                else
-                {
-                    // cas inconnu
-                    Console.WriteLine("Erreur : opérateur inconnu");
-                    return false;
+                    case e_Operateur.ADDITION:
+                        Console.Write(a + " + " + b + " =");
+                        resultatAttendu = a + b;
+                        break;
+                    case e_Operateur.MULTIPLICATION:
+                        Console.Write(a + " + " + b + " =");
+                        resultatAttendu = a + b;
+                        break;
+                    case e_Operateur.SOUSTRACTION:
+                        Console.Write(a + " + " + b + " =");
+                        resultatAttendu = a + b;
+                        break;
+                    default:
+                        // cas inconnu
+                        Console.WriteLine("ERREUR : opérateur inconnu");
+                        return false;
                 }
 
 
